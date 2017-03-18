@@ -1,8 +1,5 @@
 <?php
-$connection = mysql_connect("localhost", "root", "");
-
-// Selecting Database
-$db = mysql_select_db("temp_api", $connection);
+include ("/db_connect.php");
 session_start();// Starting Session
 
 // Storing Session

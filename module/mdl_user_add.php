@@ -1,5 +1,6 @@
 <?php
 include ('../session.php');
+include ('../db_connect.php');
 include ('../header.php');
 include ("api_connect_1.php");
 
@@ -17,6 +18,7 @@ $API->write("=password=$u_pass");
 if ($API->read()) {
     mysql_query("INSERT INTO temp_user(username,password,u_group) VALUES ('$u_name', '$u_pass', '$u_group')", $connection);
     echo "Data has been added Succesfully";
+    mysql_close($connection);
    }
 else {
     echo " Failed to input new user";

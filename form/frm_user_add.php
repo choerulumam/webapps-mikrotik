@@ -38,7 +38,7 @@
                                                 <input type="password" name="valid_password" class="form-control" placeholder="Enter password">
                                             </div>
                                             <div class="form-group">
-                                                <label>Group User</label>
+                                                <label>Disabled</label>
                                                 <select name="status" class="form-control">
                                                     <option value="yes">yes</option>
                                                     <option value="no">no</option>
