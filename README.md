@@ -1,2 +1,2 @@
 # webapps-mikrotik
-Apps for managaing mikrotik
+Webapps-mikrotik is the web application that used for managing mikrotik.
