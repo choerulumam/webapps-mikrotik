@@ -5,8 +5,6 @@ include ("api_connect_1.php");
 
 $u_name   = $_POST['username'];
 
-
-
 $API->write("/user/remove", false);   
 $API->write("=name=$u_name");
 
