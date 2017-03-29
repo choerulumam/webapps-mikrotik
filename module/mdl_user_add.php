@@ -16,9 +16,9 @@ $API->write("=password=$u_pass");
 //$API->write("=disabled=$u_status");
 
 if ($API->read()) {
-    mysql_query("INSERT INTO temp_user(username,password,u_group) VALUES ('$u_name', '$u_pass', '$u_group')", $connection);
+    mysqli_query($connection, "INSERT INTO temp_user(username,password,u_group) VALUES ('$u_name', '$u_pass', '$u_group')");
     echo "Data has been added Succesfully";
-    mysql_close($connection);
+    mysqli_close($connection);
    }
 else {
     echo " Failed to input new user";
