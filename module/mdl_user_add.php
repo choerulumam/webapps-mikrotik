@@ -16,10 +16,16 @@ $API->write("=password=$u_pass");
 //$API->write("=disabled=$u_status");
 
 if ($API->read()) {
-    mysqli_query($connection, "INSERT INTO temp_user(username,password,u_group) VALUES ('$u_name', '$u_pass', '$u_group')");
-    echo "Data has been added Succesfully";
+    $counter = mysqli_query($connection, "SELECT MAX(user_id) as max FROM temp_user");
+    $row = mysqli_fetch_array($counter);
+    $counter_get = $row['max']+1;
+    echo "$counter_get";
+    $check_input = mysqli_query($connection, "INSERT INTO temp_user VALUES ($counter_get, '$u_name', '$u_pass', '$u_group')");
+    if(!$check_input){
+        echo "Error input data";
+    }
     mysqli_close($connection);
-   }
+}
 else {
     echo " Failed to input new user";
 }
