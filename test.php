@@ -1,4 +1,6 @@
 <?php
+//include ("module/api_connect_1.php");
+include ("db_connect.php");
 $connection = mysqli_connect("127.0.0.1", "root", "biska", "temp_api");
 if (!$connection) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -7,14 +9,21 @@ if (!$connection) {
     exit;
 }
 else {
-    $counter = mysqli_query($connection, "SELECT MAX(user_id) as max FROM temp_user");
-    $row = mysqli_fetch_array($counter);
-    $counter_get = $row['max']+1;
-    echo "$counter_get";
-    $check_input = mysqli_query($connection, "INSERT INTO temp_user VALUES ($counter_get, 'Doni', 'endri', 'endri')");
-    if(!$check_input){
-        echo "Error input data";
+    $u_name = "choerul";
+    $query_delete = mysqli_query($connection,"SELECT user_id as id FROM temp_user WHERE username='$u_name'");
+    $row = mysqli_fetch_array($query_delete);
+    $counter_get = $row['id'];
+    if($query_delete){
+        echo "$counter_get";
     }
-    mysqli_close($connection);
+    //$API->write("/user/remove", false);   
+    //$API->write("=.id=$query_delete");
+    //if ($API->read()) {
+        //mysqli_query($connection, "Delete FROM temp_user WHERE username=$u_name");
+      //  echo "Data has been deleted Succesfully";
+    //   }
+    //else {
+      //  echo " Failed to delete user";
+    //}
 }
 ?>
