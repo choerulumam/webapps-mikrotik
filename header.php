@@ -133,14 +133,40 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
+                                <a href="#">IP<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a href="#">Third Level Item</a>
+                                        <a href="#">ARP Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Addresses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">DHCP Server</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">DNS Server</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Addresses</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Interface<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Ethernet</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wireless</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="/panel/panel_hotspot.php"><i class="fa fa-wifi fa-fw"></i>Hotspot<span class="fa arrow"></span></a>
                     </li>
                 </ul>
 

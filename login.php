@@ -4,7 +4,7 @@ use PEAR2\Net\RouterOS;
 require_once 'module/PEAR2_Net_RouterOS-1.0.0b5.phar';
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message for username and password
-//$error_mrtk=''; // Variable To Store Error Message for mikrotik user
+$error_mrtk=''; // Variable To Store Error Message for mikrotik user
 if (isset($_POST['submit'])) 
 {
 	if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['hostname'])) 
@@ -17,8 +17,6 @@ if (isset($_POST['submit']))
 	$hostname=$_POST['hostname'];
 	$username=$_POST['username'];
 	$password=$_POST['password'];
-	// Establishing Connection with Server by passing server_name, user_id and password as a parameter
-	// Selecting Database
 	// SQL query to fetch information of registerd users and finds user match.
 	$query_temp_login	= mysqli_query($connection, "select * from temp_user where password='$password' AND username='$username'");
 	$rows_login_session	= mysqli_num_rows($query_temp_login);

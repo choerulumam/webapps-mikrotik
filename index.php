@@ -6,7 +6,7 @@ if(isset($_SESSION['login_user']))
 }
 ?>
 <!DOCTYPE html>
-<html >
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Login form</title>
